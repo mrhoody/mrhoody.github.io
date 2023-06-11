@@ -34,7 +34,7 @@ class IconLinkPair extends StatelessWidget {
               icon,
               color: Colors.black,
             ),
-            onPressed: null),
+            onPressed: (link == null) ? null : _launchUrl),
         Text(text, style: Theme.of(context).textTheme.bodyLarge)
       ],
     );
@@ -47,7 +47,7 @@ class SocialMediaIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      const IconLinkPair(),
+      const IconLinkPair(link: "https://google.com"),
       IconButton(
         icon: const Icon(
           LineIcons.linkedin,
