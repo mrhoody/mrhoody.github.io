@@ -12,27 +12,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade100),
-        useMaterial3: true,
-      ),
-      home: SocialMediaIcons(),
-    );
+        title: 'Hud Syafiq Herman',
+        theme: ThemeData(useMaterial3: true),
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text(
+                "Hud's Portfolio Website",
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: Colors.pink[900],
+            ),
+            body: Column(children: [
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.amber[100],
+                    child: const Center(
+                        child: Column(
+                      children: [
+                        Text("Hud Syafiq Herman"),
+                        Text("Aspiring Full-Stack Developer"),
+                        SocialMediaIcons()
+                      ],
+                    )),
+                  ),
+                ),
+                const Expanded(
+                    child: Image(
+                  image: AssetImage("assets/hudhtx.jpg"),
+                ))
+              ])
+            ])));
   }
 }
