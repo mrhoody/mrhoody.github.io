@@ -39,18 +39,16 @@ class SocialMediaIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Row(children: [
-        IconLinkPair(icon: Icons.mail, text: "hud.syafiq@gmail.com"),
-        IconLinkPair(
-            icon: LineIcons.github,
-            text: "mrhoody",
-            link: "https://github.com/mrhoody"),
-        IconLinkPair(
-            icon: LineIcons.linkedin,
-            text: "Hud Syafiq Herman",
-            link: "https://www.linkedin.com/in/hud-syafiq-herman/")
-      ]),
-    );
+    return const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      IconLinkPair(icon: Icons.mail, text: "hud.syafiq@gmail.com"),
+      IconLinkPair(
+          icon: LineIcons.github,
+          text: "mrhoody",
+          link: "https://github.com/mrhoody"),
+      IconLinkPair(
+          icon: LineIcons.linkedin,
+          text: "Hud Syafiq Herman",
+          link: "https://www.linkedin.com/in/hud-syafiq-herman/")
+    ]);
   }
 }
